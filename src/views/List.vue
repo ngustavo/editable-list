@@ -13,16 +13,18 @@
           <v-card-text>
             <v-container grid-list-md>
               <v-layout wrap>
-                <v-flex xs12 sm6 md4>
+                <v-flex xs12 sm6>
                   <v-text-field v-model="editedItem.name" label="Name"></v-text-field>
                 </v-flex>
-                <v-flex xs12 sm6 md4>
+                <v-flex xs12 sm6>
                   <v-text-field v-model="editedItem.email" label="e-mail"></v-text-field>
                 </v-flex>
-                <v-flex xs12 sm6 md4>
+              </v-layout>
+              <v-layout wrap>
+                <v-flex xs12 sm6>
                   <v-text-field v-model="editedItem.phone" label="Phone"></v-text-field>
                 </v-flex>
-                <v-flex xs12 sm6 md4>
+                <v-flex xs12 sm6>
                   <v-text-field v-model="editedItem.city" label="City"></v-text-field>
                 </v-flex>
               </v-layout>
@@ -174,7 +176,7 @@
         } else {
           this.users.push(this.editedItem)
         }
-        this.close()
+        this.closeDialog()
       }
     }
   }
